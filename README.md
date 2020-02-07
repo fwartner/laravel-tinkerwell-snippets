@@ -1,4 +1,4 @@
-# Very short description of the package
+# Community Snippets for Tinkerwell
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fwartner/tinkerwell-snippets.svg?style=flat-square)](https://packagist.org/packages/fwartner/tinkerwell-snippets)
 [![Build Status](https://img.shields.io/travis/fwartner/tinkerwell-snippets/master.svg?style=flat-square)](https://travis-ci.org/fwartner/tinkerwell-snippets)
@@ -17,9 +17,9 @@ composer require fwartner/tinkerwell-snippets
 
 ## Usage
 
-``` php
-// Usage description here
-```
+To install the Driver for Tinkerwell run `php artisan vendor:publish --provider="Fwartner\TinkerwellSnippets\TinkerwellSnippetsServiceProvider"`.
+Open Tinkerwell on your computer and select the project, you´ve installed the package into.
+
 
 ### Testing
 
@@ -47,7 +47,3 @@ If you discover any security related issues, please email florian@wartner.io ins
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
