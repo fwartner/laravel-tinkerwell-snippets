@@ -9,6 +9,11 @@ use Fwartner\TinkerwellSnippets\TinkerwellSnippets;
 class SnippetsTinkerwellDriver extends TinkerwellDriver
 {
     /**
+     * @var array
+     */
+    public $snippets = [];
+
+    /**
      * @param $projectPath
      * @return bool
      */
@@ -30,6 +35,8 @@ class SnippetsTinkerwellDriver extends TinkerwellDriver
         $kernel = $app->make(\Illuminate\Contracts\Console\Kernel::class);
 
         $kernel->bootstrap();
+
+        $this->refreshSnippets();
     }
 
     /**
@@ -44,11 +51,21 @@ class SnippetsTinkerwellDriver extends TinkerwellDriver
                 return SetCode::create($key, "Artisan::call('" . $key . "', []);\nArtisan::output();");
             })->values()->toArray()),
 
-            Submenu::create('Snippets', collect((new TinkerwellSnippets())->getSnippets())->map(function ($snippet, $key) {
-                return SetCode::create($snippet->title, $snippet->snippet);
+//            OpenURL::create('Refresh Snippets', $this->refreshSnippets()),
+
+            Submenu::create('Snippets', collect($this->snippets)->map(function ($snippet, $key) {
+                return SetCode::create($snippet['title'], $snippet['snippet']);
             })->values()->toArray()),
 
-            OpenURL::create('Documentation', 'https://tinkerwell-snippets.com'),
+            OpenURL::create('Tinkerwell Snippets Website', 'https://tinkerwell-snippets.com'),
         ];
+    }
+
+    /**
+     *
+     */
+    private function refreshSnippets()
+    {
+        $this->snippets = (new TinkerwellSnippets())->getSnippets();
     }
 }
