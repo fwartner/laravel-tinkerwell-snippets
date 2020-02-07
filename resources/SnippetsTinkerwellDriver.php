@@ -8,12 +8,19 @@ use Fwartner\TinkerwellSnippets\TinkerwellSnippets;
 
 class SnippetsTinkerwellDriver extends TinkerwellDriver
 {
+    /**
+     * @param $projectPath
+     * @return bool
+     */
     public function canBootstrap($projectPath)
     {
         return file_exists($projectPath . '/public/index.php') &&
             file_exists($projectPath . '/artisan');
     }
 
+    /**
+     * @param $projectPath
+     */
     public function bootstrap($projectPath)
     {
         require_once $projectPath . '/vendor/autoload.php';
@@ -25,6 +32,9 @@ class SnippetsTinkerwellDriver extends TinkerwellDriver
         $kernel->bootstrap();
     }
 
+    /**
+     * @return array
+     */
     public function contextMenu()
     {
         return [
