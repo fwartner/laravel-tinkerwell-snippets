@@ -20,13 +20,9 @@ class SnippetsApiTest extends TestCase
     /** @test */
     public function test_can_create_new_token()
     {
-        $apiLayer = new TinkerwellSnippets();
-        $token = $apiLayer->generateNewToken();
-
-        if ($token) {
+        $snippets = (new TinkerwellSnippets())->getSnippets();
+        if ($snippets) {
             $this->assertTrue(true);
         }
     }
-
-
 }
