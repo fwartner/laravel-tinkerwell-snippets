@@ -24,6 +24,11 @@ php artisan vendor:publish --provider="Fwartner\TinkerwellSnippets\TinkerwellSni
 
 Open Tinkerwell on your computer and select the project, you´ve installed the package into.
 
+Add the following lines to your `.env` file:
+```
+SNIPPETS_CLIENT_ID=
+SNIPPETS_CLIENT_SECRET=
+```
 
 ### Testing
 
