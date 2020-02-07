@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/fwartner/tinkerwell-snippets.svg?style=flat-square)](https://scrutinizer-ci.com/g/fwartner/laravel-tinkerwell-snippets)
 [![Total Downloads](https://img.shields.io/packagist/dt/fwartner/tinkerwell-snippets.svg?style=flat-square)](https://packagist.org/packages/fwartner/tinkerwell-snippets)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Use snippets in Tinkerwell that are driven by the community 🌐
 
 ## Installation
 
