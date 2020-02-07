@@ -17,6 +17,11 @@ class TinkerwellSnippets
     private $token;
 
     /**
+     * @var string
+     */
+    private $baseURL = 'https://test.devrite.co';
+
+    /**
      * DatahouseService constructor.
      */
     public function __construct()
@@ -29,13 +34,11 @@ class TinkerwellSnippets
      */
     public function generateNewToken()
     {
-        $response = $this->client->post('https://test.devrite.co/oauth/token', [
+        $response = $this->client->post($this->baseURL . '/oauth/token', [
             'form_params' => [
                 'grant_type' => 'client_credentials',
-//                'client_id' => config('tinkerwell-snippets.client_id'),
-//                'client_secret' => config('tinkerwell-snippets.client_secret'),
-                'client_id' => '3',
-                'client_secret' => 'CQThpCpuHGlDN3fVl52m76RhtZ0V5TAsTIKpCM4P',
+                'client_id' => config('tinkerwell-snippets.client_id'),
+                'client_secret' => config('tinkerwell-snippets.client_secret'),
             ],
         ]);
 
@@ -49,7 +52,7 @@ class TinkerwellSnippets
     public function getSnippets()
     {
         $this->generateNewToken();
-        $response = $this->client->request('GET', 'https://test.devrite.co/api/snippets', [
+        $response = $this->client->request('GET', $this->baseURL . '/api/snippets', [
             'headers' => [
                 'Accept' => 'application/json',
                 "Authorization" => "Bearer {$this->token}",
