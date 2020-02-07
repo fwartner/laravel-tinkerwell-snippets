@@ -12,7 +12,7 @@ Use snippets in Tinkerwell that are driven by the community 🌐
 You can install the package via composer:
 
 ```bash
-composer require fwartner/tinkerwell-snippets
+composer require fwartner/tinkerwell-snippets --dev
 ```
 
 ## Usage
