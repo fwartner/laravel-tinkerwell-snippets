@@ -1,8 +1,8 @@
 # Community Snippets for Tinkerwell
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fwartner/tinkerwell-snippets.svg?style=flat-square)](https://packagist.org/packages/fwartner/tinkerwell-snippets)
-[![Build Status](https://img.shields.io/travis/fwartner/laravel-tinkerwell-snippets/master.svg?style=flat-square)](https://travis-ci.org/fwartner/tinkerwell-snippets)
-[![Quality Score](https://img.shields.io/scrutinizer/g/fwartner/tinkerwell-snippets.svg?style=flat-square)](https://scrutinizer-ci.com/g/fwartner/laravel-tinkerwell-snippets)
+[![Build Status](https://img.shields.io/travis/fwartner/laravel-tinkerwell-snippets/master.svg?style=flat-square)](https://travis-ci.org/fwartner/laravel-tinkerwell-snippets)
+[![Quality Score](https://img.shields.io/scrutinizer/g/fwartner/laravel-tinkerwell-snippets.svg?style=flat-square)](https://scrutinizer-ci.com/g/fwartner/laravel-tinkerwell-snippets)
 [![Total Downloads](https://img.shields.io/packagist/dt/fwartner/tinkerwell-snippets.svg?style=flat-square)](https://packagist.org/packages/fwartner/tinkerwell-snippets)
 
 Use snippets in Tinkerwell that are driven by the community 🌐
