@@ -48,7 +48,7 @@ class SnippetsTinkerwellDriver extends TinkerwellDriver
                 return SetCode::create($snippet->title, $snippet->snippet);
             })->values()->toArray()),
 
-            OpenURL::create('Documentation', 'https://tinkerwell-snippets.xyz'),
+            OpenURL::create('Documentation', 'https://tinkerwell-snippets.com'),
         ];
     }
 }
