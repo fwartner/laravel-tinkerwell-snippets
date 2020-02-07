@@ -21,8 +21,8 @@ class TinkerwellSnippetsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('tinkerwell-snippets.php'),
-            ], 'config');
+                __DIR__ . '/../config/config.php' => config_path('tinkerwell-snippets.php'),
+            ], 'tinkerwell-snippets-config');
 
             // Publishing the views.
             /*$this->publishes([
@@ -31,8 +31,8 @@ class TinkerwellSnippetsServiceProvider extends ServiceProvider
 
             // Publishing assets.
             $this->publishes([
-                __DIR__.'/../resources/' => base_path('.tinkerwell/'),
-            ], 'assets');
+                __DIR__ . '/../resources/' => base_path('.tinkerwell/'),
+            ], 'tinkerwell-snippets-assets');
 
             // Publishing the translation files.
             /*$this->publishes([
@@ -50,7 +50,7 @@ class TinkerwellSnippetsServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'tinkerwell-snippets');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'tinkerwell-snippets');
 
         // Register the main class to use with the facade
         $this->app->singleton('tinkerwell-snippets', function () {
