@@ -17,7 +17,11 @@ composer require fwartner/tinkerwell-snippets
 
 ## Usage
 
-To install the Driver for Tinkerwell run `php artisan vendor:publish --provider="Fwartner\TinkerwellSnippets\TinkerwellSnippetsServiceProvider"`.
+To install the Driver for Tinkerwell run :
+```bash
+php artisan vendor:publish --provider="Fwartner\TinkerwellSnippets\TinkerwellSnippetsServiceProvider"
+```
+
 Open Tinkerwell on your computer and select the project, you´ve installed the package into.
 
 
