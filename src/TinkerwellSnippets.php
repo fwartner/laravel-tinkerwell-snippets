@@ -19,7 +19,7 @@ class TinkerwellSnippets
     /**
      * @var string
      */
-    private $baseURL = 'https://test.devrite.co';
+    private $baseURL = 'https://tinkerwell-snippets.com';
 
     /**
      * DatahouseService constructor.
